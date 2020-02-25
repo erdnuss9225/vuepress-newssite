@@ -20,10 +20,10 @@
 
             <!-- <h3>{{currentLocale}}</h3> -->
 
-            <h2 class=".article__headline">{{articleText[0].headline}}</h2>
-            <p class="article__abstract">{{articleText[0].abstract}}</p>
-            <img class="article__headerImage" :src="articleText[0].header_image" alt="Header Image">
-            <p class="article__text">{{articleText[0].text}}</p>
+            <h2 class=".article__headline">{{articleArray[0].headline}}</h2>
+            <p class="article__abstract">{{articleArray[0].abstract}}</p>
+            <img class="article__headerImage" :src="articleArray[0].header_image" alt="Header Image">
+            <p class="article__text">{{articleArray[0].text}}</p>
             <a class="link" href="/">{{currentLocaleHelp[currentLocale][1]}}</a>
         </div>
 
@@ -43,10 +43,7 @@ export default {
 
     data () {
         return {
-            articleHeadline: [],
-            articleAbstract: [],
-            articleImage: [],
-            articleText: [],
+            articleArray: [],
 
             currentLocale: 'de',
             currentLocaleHelp: {
@@ -65,7 +62,7 @@ export default {
         // console.log(this.setlng);
         
         const slug = this.$route.params.slug;
-            this.articleText = this.$site.pages[0].frontmatter.de.filter( item => item.slug === slug);
+            this.articleArray = this.$site.pages[0].frontmatter.de.filter( item => item.slug === slug);
 
     }
 }
