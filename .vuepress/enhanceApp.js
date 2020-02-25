@@ -4,6 +4,6 @@ export default ({ router }) => {
             path: '/:slug',
             name: 'dynamic-route',
             component: () =>
-            import('./theme/TestGroundLayout.vue')
+            import('./components/Article.vue')
         }])
   }
