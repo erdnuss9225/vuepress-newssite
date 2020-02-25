@@ -5,11 +5,5 @@ export default ({ router }) => {
             name: 'dynamic-route',
             component: () =>
             import('./theme/TestGroundLayout.vue')
-        }],
-        {
-            path: '/TestGroundLayout',
-            name: 'dynamic-route',
-            component: () =>
-              import('./theme/TestGroundLayout.vue')
-})
+        }])
   }
